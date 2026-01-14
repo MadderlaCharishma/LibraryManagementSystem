@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS library_db;
+USE library_db;
+
+
+CREATE TABLE IF NOT EXISTS books (
+    id INT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    category VARCHAR(100) NOT NULL,
+    isIssued BOOLEAN DEFAULT FALSE,
+    issueDate DATE DEFAULT NULL
+);
+
+INSERT INTO books (id, title, author, category, isIssued, issueDate)
+VALUES
+(1, 'Java Programming', 'laxmibhai', 'Programming', FALSE, NULL),
+(2, 'Python ', 'ramaseetha', 'Programming', FALSE, NULL),
+(3, 'History of India', 'Ramesh Kumar', 'History', FALSE, NULL);
+
